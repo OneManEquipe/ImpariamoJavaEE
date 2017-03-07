@@ -1,0 +1,21 @@
+
+
+
+
+TO DO 
+
+
+
+	a) backend HIBERNATE(ORM)/JDBC + Salvspring
+	
+	b) frontend SpringMVC + Bootstrap + AngularJS + JQUERY
+	
+ 	c) webservice SOAP + REST
+	
+	d) android AndroidStudio
+	
+	
+	
+	punto di partenza pare essere il model, ma il DAO sfrutta JDBC e HIBERNATE ORM... cosa facciamo?
+	Ignoriamo per ora HIBERNATE...
+	
