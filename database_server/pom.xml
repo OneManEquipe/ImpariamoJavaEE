@@ -6,7 +6,7 @@
 	</properties>
 	<groupId>database_server</groupId>
 	<artifactId>database_server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1.1</version>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
