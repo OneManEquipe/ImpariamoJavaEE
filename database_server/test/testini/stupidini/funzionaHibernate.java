@@ -1,30 +1,24 @@
-package testiniStupidini;
+package testini.stupidini;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.junit.Test;
 
-import com.model.hibernateWrappers.WrapperBook;
+import com.model.Book;
 
 public class funzionaHibernate {
-
-	@Test
-	public void provaSave() {
-		WrapperBook b = new WrapperBook();
+	
+	public static void main(String[] args) {
 		
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.getCurrentSession();
 		Transaction transaction = session.beginTransaction();
 		
-		b.setId("0123456789");
-		b.setAuthor("Alessandro");
-		b.setTitle("La mia storia");
-		b.setPublisher("Ferrari");
-		b.setCategory_id(10);
+		Book b = session.get(Book.class, "9780002155878");
 		
-		session.save(b);
+		System.out.println(b.toString());
+		System.out.println(b.getCategory().toString());
 		transaction.commit();
 		sessionFactory.close();
 	}

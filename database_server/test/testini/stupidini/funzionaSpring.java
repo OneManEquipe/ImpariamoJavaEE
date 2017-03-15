@@ -1,4 +1,4 @@
-package testiniStupidini;
+package testini.stupidini;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -10,7 +10,7 @@ public class funzionaSpring {
 
 	@Test
 	public void scopriamolo() {
-		try (ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring/provaBeans.xml")) {
+		try (ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring/test/provaBeans.xml")) {
 
 			Book b = (Book) ctx.getBean("caccapupu");
 

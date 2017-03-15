@@ -5,18 +5,18 @@ public class Book {
 	String title;
 	String edition; //can be null, default null
 	String author;
-	int year; //can be null, default null
+	Integer year; //can be null, default null
 	String publisher;
-	int page_number; //can be null, default null
+	Integer page_number; //can be null, default null
 	String description; //can be null, default null;
-	int category_id;
+	Category category;
 	
 	public Book() {
 		super();
 	}
 	
-	public Book(String id, String title, String edition, String author, int year, String publisher, int page_number,
-			String description, int category_id) {
+	public Book(String id, String title, String edition, String author, Integer year, String publisher, Integer page_number,
+			String description, Category category) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -26,7 +26,7 @@ public class Book {
 		this.publisher = publisher;
 		this.page_number = page_number;
 		this.description = description;
-		this.category_id = category_id;
+		this.category = category;
 	}
 	public String getId() {
 		return id;
@@ -52,10 +52,10 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	public int getYear() {
+	public Integer getYear() {
 		return year;
 	}
-	public void setYear(int year) {
+	public void setYear(Integer year) {
 		this.year = year;
 	}
 	public String getPublisher() {
@@ -64,10 +64,10 @@ public class Book {
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
-	public int getPage_number() {
+	public Integer getPage_number() {
 		return page_number;
 	}
-	public void setPage_number(int page_number) {
+	public void setPage_number(Integer page_number) {
 		this.page_number = page_number;
 	}
 	public String getDescription() {
@@ -76,11 +76,18 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getCategory_id() {
-		return category_id;
+	public Category getCategory() {
+		return category;
 	}
-	public void setCategory_id(int category_id) {
-		this.category_id = category_id;
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", edition=" + edition + ", author=" + author + ", year=" + year
+				+ ", publisher=" + publisher + ", page_number=" + page_number + ", description=" + description
+				+ ", category=" + category + "]";
 	}
 	
 	
