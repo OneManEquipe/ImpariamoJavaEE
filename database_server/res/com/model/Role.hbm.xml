@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-feb-2017 10.34.22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.model.Library" table="Library">
+		<id name="id" type="integer">	<!-- stesso discorso di date -->
+			<column name="id" />
+			<generator class="increment"></generator>
+		</id>
+		<property name="description" type="string">
+			<column name="description"/>
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-feb-2017 10.34.22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="com.model.Library" table="Library">
+		<id name="id" type="string">	<!-- stesso discorso di date -->
+			<column name="id" />
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" type="string"> 
+			<column name="name"/>
+		</property>
+		<property name="surname" type="string">
+			<column name="surname"/>
+		</property>
+		<property name="birtdate" type="date">
+			<column name="birthdate"/>
+		</property>
+		<property name="email" type="string">
+			<column name="email"/>
+		</property>
+		<property name="address" type="string">
+			<column name="address"/>
+		</property>
+		<property name="customer_code" type="string">
+			<column name="customer_code"/>
+		</property>
+		<property name="password" type="string">
+			<column name="password"/>
+		</property>
+		<property name="invalid_from" type="date">
+			<column name="invalid_from"/>
+		</property>
+		
+		<many-to-one name="role" column="role_id"/>
+		
+		
+		
+		
+		
+		<many-to-one name="user" column="user_id"/>
+		<many-to-one name="book" column="book_id"/>
+	</class>
+</hibernate-mapping>

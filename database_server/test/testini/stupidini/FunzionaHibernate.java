@@ -8,8 +8,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.model.Book;
+import com.spring.SpringContextFactory;
 
-public class funzionaHibernate {
+public class FunzionaHibernate {
 
 	public static void main(String[] args) {
 
@@ -18,7 +19,7 @@ public class funzionaHibernate {
 		// Session session = sessionFactory.getCurrentSession();
 		
 		//try che auto chiude il context
-		try (ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring/hibernateBeans.xml")) {
+		try (ConfigurableApplicationContext context = SpringContextFactory.getContext("spring/hibernateBeans.xml")) {
 			Session session = (Session) context.getBean("session");
 
 			Transaction transaction = session.beginTransaction();
@@ -27,7 +28,6 @@ public class funzionaHibernate {
 			System.out.println(b.toString());
 			System.out.println(b.getCategory().toString());
 			transaction.commit();
-			
 		}
 
 	}

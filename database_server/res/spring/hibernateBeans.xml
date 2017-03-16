@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    
-   	<bean name="sessionFactory" class="com.dao.hibernate.SessionFactoryFactory" factory-method="getSessionFactory" scope="singleton"/>
+   	<bean name="sessionFactory" class="com.dao.hibernate.HibernateSessionFactoryFactory" factory-method="getSessionFactory" scope="singleton"/>
    	
    	<bean name="session" class="org.hibernate.SessionFactory" factory-method="getCurrentSession" factory-bean="sessionFactory"/>
 </beans>

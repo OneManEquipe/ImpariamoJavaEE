@@ -16,5 +16,9 @@
    
    		<mapping resource="com/model/Book.hbm.xml"/>
    		<mapping resource="com/model/Category.hbm.xml"/>
+   		<mapping resource="com/model/Loan.hbm.xml"/>
+   		<mapping resource="com/model/Library.hbm.xml"/>
+   		<mapping resource="com/model/Role.hbm.xml"/>
+   		<mapping resource="com/model/User.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

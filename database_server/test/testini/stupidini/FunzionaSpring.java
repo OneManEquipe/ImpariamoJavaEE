@@ -6,7 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.model.Book;
 
-public class funzionaSpring {
+public class FunzionaSpring {
 
 	@Test
 	public void scopriamolo() {

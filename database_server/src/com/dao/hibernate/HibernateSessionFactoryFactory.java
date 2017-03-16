@@ -3,7 +3,7 @@ package com.dao.hibernate;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class SessionFactoryFactory {
+public class HibernateSessionFactoryFactory {
 
 	public static SessionFactory getSessionFactory(String conf) {
 		return new Configuration().configure(conf).buildSessionFactory();
