@@ -1,4 +1,4 @@
-package testiniStupidini;
+package testini.stupidini;
 
 import static org.junit.Assert.*;
 import org.junit.Test;

@@ -21,6 +21,5 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/Alessandro/Dropbox/Corso/Modulo3/MySQL/giorno4/mariadb-java-client-1.5.7.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

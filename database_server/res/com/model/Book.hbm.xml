@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 20-feb-2017 10.34.22 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-	<class name="com.model.hibernateWrappers.WrapperBook" table="Book">
+	<class name="com.model.Book" table="Book">
 		<id name="id" type="java.lang.String">
 			<column name="id" />
 		</id>
@@ -17,20 +17,18 @@
 		<property name="author" type="java.lang.String">
 			<column name="author" />
 		</property>
-		<property name="wrapperYear" type="java.lang.Integer">
+		<property name="year" type="java.lang.Integer">
 			<column name="year" />
 		</property>
 		<property name="publisher" type="java.lang.String">
 			<column name="publisher" />
 		</property>
-		<property name="wrapperPageNumber" type="java.lang.Integer">
+		<property name="page_number" type="java.lang.Integer">
 			<column name="page_number" />
 		</property>
 		<property name="description" type="java.lang.String">
 			<column name="description" />
 		</property>
-		<property name="wrapperCategory_id" type="java.lang.Integer">
-			<column name="category_id" />
-		</property>
+		<many-to-one name="category" column="category_id"/>
 	</class>
 </hibernate-mapping>
