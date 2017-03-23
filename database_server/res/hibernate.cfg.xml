@@ -5,8 +5,8 @@
 <hibernate-configuration>
    <session-factory>
 		<property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
-		<property name="hibernate.connection.password">abc160033900ABC</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library</property>
+		<property name="hibernate.connection.password">12345678</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library2</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="hibernate.current_session_context_class">thread</property>
@@ -16,5 +16,9 @@
    
    		<mapping resource="com/model/Book.hbm.xml"/>
    		<mapping resource="com/model/Category.hbm.xml"/>
+   		<mapping resource="com/model/Loan.hbm.xml"/>
+   		<mapping resource="com/model/Library.hbm.xml"/>
+   		<mapping resource="com/model/Role.hbm.xml"/>
+   		<mapping resource="com/model/User.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

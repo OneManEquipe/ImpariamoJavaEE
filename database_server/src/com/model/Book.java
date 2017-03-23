@@ -28,57 +28,75 @@ public class Book {
 		this.description = description;
 		this.category = category;
 	}
+
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getEdition() {
 		return edition;
 	}
+
 	public void setEdition(String edition) {
 		this.edition = edition;
 	}
+
 	public String getAuthor() {
 		return author;
 	}
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
 	public Integer getYear() {
 		return year;
 	}
+
 	public void setYear(Integer year) {
 		this.year = year;
 	}
+
 	public String getPublisher() {
 		return publisher;
 	}
+
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
+
 	public Integer getPage_number() {
 		return page_number;
 	}
+
 	public void setPage_number(Integer page_number) {
 		this.page_number = page_number;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	public Category getCategory() {
 		return category;
 	}
+
 	public void setCategory(Category category) {
 		this.category = category;
 	}
@@ -89,6 +107,5 @@ public class Book {
 				+ ", publisher=" + publisher + ", page_number=" + page_number + ", description=" + description
 				+ ", category=" + category + "]";
 	}
-	
 	
 }

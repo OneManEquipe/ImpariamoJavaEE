@@ -1,33 +1,28 @@
 package testini.stupidini;
 
 import org.hibernate.Session;
-
 import org.hibernate.Transaction;
 import org.junit.Test;
 import org.springframework.context.ConfigurableApplicationContext;
-import com.model.Book;
+
+import com.model.Loan;
 import com.spring.SpringContextFactory;
 
-public class FunzionaHibernate {
+public class FunzionaLoan {
 
 	@Test
-	public void testHibernate() {
-
-		// SessionFactory sessionFactory = new
-		// Configuration().configure().buildSessionFactory();
-		// Session session = sessionFactory.getCurrentSession();
-		
-		//try che auto chiude il context
+	public void testLoan() {
 		try (ConfigurableApplicationContext context = SpringContextFactory.getContext("spring/hibernateBeans.xml")) {
 			Session session = (Session) context.getBean("session");
 
 			Transaction transaction = session.beginTransaction();
 
-			Book b = (Book) session.get(Book.class, "9780003831795");
-			System.out.println(b.toString());
-			System.out.println(b.getCategory().toString());
+			Loan l = (Loan)session.get(Loan.class, 1);
+			System.out.println(l.toString());
+			System.out.println(l.getBook().toString());
+			System.out.println(l.getUser().toString());
+			
 			transaction.commit();
 		}
-
 	}
 }

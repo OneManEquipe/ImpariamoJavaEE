@@ -29,6 +29,6 @@
 		<property name="description" type="java.lang.String">
 			<column name="description" />
 		</property>
-		<many-to-one name="category" column="category_id" />
+		<many-to-one name="category" column="category_id"/>
 	</class>
 </hibernate-mapping>
